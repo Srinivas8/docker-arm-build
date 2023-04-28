@@ -85,7 +85,7 @@ jobs:
             --cache-to "type=local,dest=/tmp/.buildx-cache" \
             --platform linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x \
             --output "type=image,push=false" \
-            --tag rakeshkrishna/graviton2-arm-cicd-docker-buildx:cache \
+            --tag Srinivas8/docker-arm-build-docker-buildx:cache \
             --file ./test/Dockerfile-diun ./test
       -
         name: Login to DockerHub
@@ -102,7 +102,7 @@ jobs:
             --cache-from "type=local,src=/tmp/.buildx-cache" \
             --platform linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x \
             --output "type=image,push=true" \
-            --tag rakeshkrishna/graviton2-arm-cicd-docker-buildx:cache \
+            --tag Srinivas8/docker-arm-build-docker-buildx:cache \
             --file ./test/Dockerfile-diun ./test
       -
         name: Inspect image
